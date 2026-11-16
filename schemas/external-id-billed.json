@@ -1,9 +1,19 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Offering extension, version 1",
+  "description": "Extension of a TMF620 ProductOffering. Within a version only changes that cannot invalidate an existing offer are made (a new optional property); anything else is a new version, see the README.",
   "additionalProperties": false,
   "properties": {
     "externalId": {
       "type": "string"
+    },
+    "offerKind": {
+      "type": "string",
+      "enum": [
+        "dataset",
+        "api"
+      ],
+      "description": "What the offer sells, when it is a dataset or an API. It is left out for any other offer. It is set when the offer is created, so that the datasets or the APIs of a seller can be listed with a plain filter (offerKind=dataset) instead of looking at the product of every offer."
     },
     "pricingLogicAlgorithm": {
       "type": "array",
