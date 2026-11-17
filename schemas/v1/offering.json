@@ -9,10 +9,6 @@
     },
     "offerKind": {
       "type": "string",
-      "enum": [
-        "dataset",
-        "api"
-      ],
       "description": "What the offer sells, when it is a dataset or an API. It is left out for any other offer. It is set when the offer is created, so that the datasets or the APIs of a seller can be listed with a plain filter (offerKind=dataset) instead of looking at the product of every offer."
     },
     "pricingLogicAlgorithm": {
